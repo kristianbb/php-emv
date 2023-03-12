@@ -38,7 +38,7 @@
         "phpunit/phpunit": "4.0.*"
     },
     "autoload": {
-        "psr-4": { "Emv\\": "src/" }
+        "psr-4": { "Emv\\": "src/Emv/" }
     },
     "autoload-dev": {
         "psr-4": { "Emv\\Test\\": "test/" }
