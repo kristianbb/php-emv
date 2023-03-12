@@ -8,34 +8,19 @@ A collection of EMV tools and utilities for PHP 5.3+
 
 The recommended way to install PHP EMV is through [Composer][COMPOSER]:
 
-```json
-{
-    "require": {
-        "kristianbb/php-emv": "@stable"
-    }
-}
-```
-
 ```bash
-$ composer install
+$ composer require kristianbb/php-emv
 ```
-
-**ProTip** -- avoid the `@stable` keyword, [use a proper version tag][PACKAGIST_VERSION] instead.
 
 [COMPOSER]: https://getcomposer.org/
-[PACKAGIST_VERSION]: https://packagist.org/packages/unwiredbrain/php-emv
 
-## Testing
+## Usage
 
-PHP EMV comes with a full-fledged test suite. To run it, install [PHPUnit][PHPUNIT] via [Composer][COMPOSER]:
-
-```bash
-$ composer install --dev
-$ php vendor/bin/phpunit
+```php
+use Emv\Tlv\Codec;
+$codecObj = new Codec();
+$tags = $codecObj->unserialize($data);
 ```
-
-[PHPUNIT]: http://phpunit.de/
-[COMPOSER]: https://getcomposer.org/
 
 ## Contributing
 
